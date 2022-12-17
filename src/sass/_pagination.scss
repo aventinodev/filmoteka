@@ -1,0 +1,29 @@
+.pagination {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+.pagination_-list {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+}
+.pagination__item:not:last-child {
+  margin-right: 8px;
+}
+.disabled {
+}
+.href {
+}
+.pagination__link {
+}
+.pagination__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 2px;
+  border-color: transparent;
+}
+.pagination__button--prev {
+}

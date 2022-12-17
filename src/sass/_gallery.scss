@@ -5,7 +5,8 @@
   --background-color-secondary: #ffffff;
   --background-color-accent: #0a4d83;
   --text-color-primary: #212121;
-  --text-color-secondary: #ff001b;
+  --text-color-secondary: #ff6b08;
+  --accent-color: #ff001b;
 }
 h2,
 p {
@@ -25,8 +26,9 @@ ul {
   margin: 0 auto;
   padding-top: 75px;
   margin-bottom: 15px;
-
+  background-color: transparent;
   @include tablet {
+    margin: 0;
     max-width: 1199px;
     display: flex;
     flex-wrap: wrap;
@@ -36,15 +38,18 @@ ul {
     min-width: 1200px;
   }
 }
-.gallery__card {
+.gallery__link {
   display: flex;
   flex-direction: column;
-  // justify-content: space-evenly;
+  height: 100%;
+}
+.gallery__card {
   border: none;
   border-radius: 5px;
   overflow: hidden;
-  background-color: #ffffff;
+
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+
   @media screen and (max-width: 768px) {
     &:not(:last-child) {
       margin-bottom: 15px;
@@ -59,29 +64,60 @@ ul {
   }
 }
 
-.gallery_img-wrap {
+.gallery__img-wrap {
   display: flex;
-  height: 100%;
-  margin-bottom: 12px;
+  overflow: hidden;
+  // position: relative;
 }
 
 .gallery__img {
+  display: block;
   width: 100%;
   object-fit: cover;
   transition: transform var(--animation-duration) var(--timing-function);
-  &:hover,
-  &:focus {
-    transform: scale(1.03);
-  }
+
+  // &:hover,
+  // &:focus {
+  //   transform: scale(1.03);
+  // }
 }
+.gallery__img-wrap:hover .gallery__img {
+  transform: scale(1.2);
+}
+
+// .image {
+// 	display: inline-block;
+// 	text-align:center;
+// 	width: 33%;
+// 	float: left;
+// }
+// figure {
+// 	overflow: hidden;
+// 	margin: 0 10px;
+// }
+// .image img {
+// 	display: block;
+// 	width: 100%;
+// 	height: auto;
+// 	cursor: pointer;
+// }
+// .image #zoom-In figure img {
+// 	transform: scale(1);
+// 	transition: 0.3s ease-in-out;
+// }
+// .image #zoom-In figure:hover img {
+// 	transform: scale(1.5);
+// }
+
 .gallery__info-wrap {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 100%;
   flex-grow: 1;
+  background-color: #ffffff;
 }
 .gallery__title {
+  padding-top: 12px;
   padding-bottom: 5px;
   font-size: 20px;
   line-height: 24px;
@@ -100,7 +136,7 @@ ul {
   border-right: 1px solid var(--text-color-secondary);
   margin-right: 5px;
 }
-.genres__item {
+.gallery__genres {
   font-size: 20px;
   line-height: 24px;
   text-transform: capitalize;

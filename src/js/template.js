@@ -13,7 +13,8 @@ export function templateCard({
   const genreNames = getGenresNames(genre_ids);
 
   return `<li class="gallery__card id="${id}">
-            <div class="gallery_img-wrap">
+  <a class="gallery__link" href="#">
+            <div class="gallery__img-wrap">
               <img
                 class="gallery__img"
                 src="${BASE_PATH}w300/${poster_path}"
@@ -26,17 +27,15 @@ export function templateCard({
             <div class="gallery__info-wrap">
             <h2 class="gallery__title">${title}</h2>
             <div class="gallery__info">
-              <ul class="genres__list">
-                <li class="genres__item">${
-                  genreNames.length > 3
-                    ? genreNames.slice(0, 3).splice(2, 1, 'others').join(', ')
-                    : genreNames.join(', ')
-                }</li>
-                
-              </ul>
+             <p class="gallery__genres">${
+               genreNames.length > 3
+                 ? genreNames.slice(0, 3).splice(2, 1, 'others').join(', ')
+                 : genreNames.join(', ')
+             }</p>                      
               <p class="gallery__year">${release_date.split('-')[0]}</p>
             </div>
             </div>
+           </a> 
           </li>`;
 }
 

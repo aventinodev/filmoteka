@@ -33,11 +33,19 @@ a {
 }
 
 .container {
-  width: 1280px;
+  width: 100%;
   margin: 0 auto;
   padding-right: 32px;
   padding-left: 32px;
+
+  @include tablet {
+    max-width: 1279px;
+  }
+  @include desktop {
+    min-width: 1280px;
+  }
 }
+
 .container--header {
   padding-top: 40px;
   padding-bottom: 44px;
