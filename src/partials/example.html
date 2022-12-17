@@ -1,37 +1,87 @@
-<article class="example" id="uk">
-  <h1>HTML-partials</h1>
-
-  <!--
-    ❗️❗️❗️ The path to images from the HTML partial
-    is the same as from the index.html file
-  -->
-  <img src="images/logo.png" alt="" width="320" />
-
-  <p>
-    The
-    <a
-      href="https://github.com/posthtml/posthtml-include"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      posthtml-include
-    </a>
-    plugin allows you to add code from other HTML files (fragments) to HTML page
-    files. Fragments are stored in the <code>src/partials</code> folder. The
-    addition occurs when compiling page files, such as <code>index.html</code>.
-  </p>
-
-  <p>
-    This <code>example.html</code> file is an example of such a snippet, with
-    the markup of a certain part of the main page. This is very convenient for
-    team development on student projects, when several people write in one HTML
-    file at once.
-  </p>
-
-  <p>
-    The syntax for adding a fragment to the main file is:
-    <code> &lt;include src="./partials/filename.html"&gt;&lt;/include&gt;</code>
-  </p>
-
-  <div class="background"></div>
-</article>
+<!-- <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/src/sass/index.scss" />
+    <title>Document</title>
+  </head>
+  <body> -->
+<header class="header header--main">
+  <div class="container container--header">
+    <nav class="navigation header__navigation">
+      <a href="./index.html" lang="en" class="logo header__logo">
+        <svg class="logo__icon" width="24" height="24">
+          <use href="#"></use>
+        </svg>
+        <span class="logo__text">Filmoteka</span>
+      </a>
+      <ul class="navigation__list">
+        <li class="navigation__item current">
+          <a class="navigation__link current" href="#">Home</a>
+        </li>
+        <li class="navigation__item">
+          <a class="navigation__link" href="#">my library</a>
+        </li>
+      </ul>
+    </nav>
+    <div>
+      <form action="" name="subscribe" class="form">
+        <input
+          type="text"
+          name="guery"
+          placeholder="Movie search"
+          class="form__query"
+        />
+        <button type="submit" class="form__button">
+          <svg class="form__icon" width="24" height="24">
+            <use href="#"></use>
+          </svg>
+        </button>
+      </form>
+      <p class="wrong">
+        Search result not successful. Enter the correct movie name and
+      </p>
+    </div>
+    <div class="watched-wrap">
+      <button class="watched__btn">Watched</button>
+      <button class="watched__btn">queue</button>
+    </div>
+  </div>
+</header>
+<section class="filmoteka">
+  <div class="container">
+    <ul class="gallery">
+      <!-- <li class="gallery__card">
+            <div class="gallery_img-wrap">
+              <img
+                class="gallery__img"
+                src="/src/images/img-fronted-developer.jpg"
+                alt="tags"
+                loading="lazy"
+                width="395"
+                height="569"
+              />
+            </div>
+            <h2 class="gallery__title">Title</h2>
+            <div class="gallery__info">
+              <ul class="genres__list">
+                <li class="genres__item">genres</li>
+              </ul>
+              <p class="gallery__year">2022</p>
+            </div>
+          </li> -->
+    </ul>
+  </div>
+</section>
+<footer></footer>
+<!-- <script type="module" src="/src/index.js"></script>
+  </body>
+</html> -->
