@@ -27,7 +27,12 @@ export function templateCard({
             <h2 class="gallery__title">${title}</h2>
             <div class="gallery__info">
               <ul class="genres__list">
-                <li class="genres__item">${genreNames}</li>
+                <li class="genres__item">${
+                  genreNames.length > 3
+                    ? genreNames.slice(0, 3).splice(2, 1, 'others').join(', ')
+                    : genreNames.join(', ')
+                }</li>
+                
               </ul>
               <p class="gallery__year">${release_date.split('-')[0]}</p>
             </div>

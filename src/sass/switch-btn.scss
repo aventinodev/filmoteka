@@ -1,7 +1,13 @@
-.switch-btn {
+.switsh-wrap {
   position: absolute;
   top: 15px;
   right: 15px;
+}
+
+.switch-btn {
+  position: absolute;
+  top: 0;
+  right: 0;
 
   display: inline-block;
   width: 72px; /* ширина */
@@ -42,8 +48,8 @@
 }
 .switch-on {
   background: var(--text-color-secondary);
-}
-.switch-on::after {
-  left: 43px;
-  //    left: 37px;
+  &::after {
+    left: 43px;
+    //    left: 37px;
+  }
 }
