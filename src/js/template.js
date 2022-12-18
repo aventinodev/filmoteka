@@ -24,17 +24,18 @@ export function templateCard({
                 height="569"
                               />
             </div>
-            <div class="gallery__info-wrap">
-            <h2 class="gallery__title">${title}</h2>
+           
+          <div class="gallery__info-wrap">            
+            <h2 class="gallery__title">${title}</h2>            
             <div class="gallery__info">
              <p class="gallery__genres">${
                genreNames.length > 3
                  ? genreNames.slice(0, 3).splice(2, 1, 'others').join(', ')
                  : genreNames.join(', ')
              }</p>                      
-              <p class="gallery__year">${release_date.split('-')[0]}</p>
-            </div>
-            </div>
+             <p class="gallery__year">${release_date.split('-')[0]}</p>
+            </div>           
+          </div>
            </a> 
           </li>`;
 }

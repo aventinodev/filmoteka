@@ -1,1 +1,76 @@
-@import '~node_modules/modern-normalize/modern-normalize.css';
+:root {
+  --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  --animation-duration: 250ms;
+  --background-color: #ffffff;
+  --background-color-secondary: #ffffff;
+  --background-color-accent: #ff6b08;
+  --text-color-primary: #212121;
+  --text-color-secondary: #ff6b08;
+  --text-color-additional: #ffffff;
+  --accent-color: #ff001b;
+  --boxShadowButton: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+button {
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+address {
+  font-style: normal;
+}
+
+body {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  color: #ffffff;
+  // letter-spacing: 0.03em;
+  // logo
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
+
+  @include mobile {
+    min-width: 320px;
+  }
+
+  @include tablet {
+    min-width: 768px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  @include desktop {
+    min-width: 1280px;
+  }
+}
+.container--header {
+  padding-top: 40px;
+  padding-bottom: 44px;
+}

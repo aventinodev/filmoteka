@@ -1,9 +1,14 @@
-@import './common';
+@import '~node_modules/modern-normalize/modern-normalize.css';
 @import './mixin';
+@import './common';
+
+@import './header';
+@import './button';
 @import './main-page';
+@import './gallery';
 @import './page_castom';
 @import './modal';
 @import './pagination';
 @import './modal-team';
-@import './gallery';
-@import './switch-btn.scss';
+
+// @import './switch-btn';

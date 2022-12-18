@@ -1,10 +1,10 @@
 import { getPopularFilms, getFilmByKeyWord, getGenres } from './js/api';
 import { templateCards } from './js/template';
 import { refs } from './js/refs';
-import { onSwitchButton } from './js/switch-btn';
+// import { onSwitchButton } from './js/switch-btn';
 
 let page = 1;
-onSwitchButton();
+// onSwitchButton();
 async function createGallery() {
   try {
     const data = await getPopularFilms(page);

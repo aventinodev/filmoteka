@@ -1,0 +1,32 @@
+.watched-wrap {
+  width: 100%;
+  display: flex;
+  gap: 20px;
+}
+.watched__btn {
+  display: inline-block;
+  @include item(1, 20px);
+  visibility: hidden;
+  padding: 12px 16px;
+  border: 1px solid #ffffff;
+  border-radius: 5px;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  text-transform: uppercase;
+  color: var(--text-color-additional);
+  background-color: transparent;
+  box-shadow: var(--boxShadowButton);
+
+  @include tablet {
+    display: flex;
+  }
+  @include desktop {
+  }
+}
+.js-active {
+  border: none;
+  background-color: var(--background-color-accent);
+}
