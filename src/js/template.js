@@ -32,8 +32,8 @@ export function templateCard({
                genreNames.length > 3
                  ? genreNames.slice(0, 2).join(', ')
                  : genreNames.join(', ')
-             }</p>                      
-             <p class="gallery__year">${release_date.split('-')[0]}</p>
+             }</p>             
+             <p class="gallery__year">| ${release_date.split('-')[0]}</p>
             </div>           
           </div>
            </a> 
