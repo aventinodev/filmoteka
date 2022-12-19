@@ -84,7 +84,7 @@ section {
   height: 13%;
   background-color: #ffffff;
 }
-.gallery__title {
+.gallery__subtitle {
   padding-top: 12px;
   padding-bottom: 5px;
   font-size: 20px;
@@ -97,7 +97,11 @@ section {
   color: var(--text-color-primary);
   padding-bottom: 5px;
 }
-
+.text-hidden {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
 // .genres__list {
 //   display: flex;
 //   height: 20px;

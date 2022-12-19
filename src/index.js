@@ -12,6 +12,7 @@ refs.pageLibrary.addEventListener('click', onTogglePage);
 refs.pageHome.addEventListener('click', onHomePageActive);
 
 startAddCurentClass();
+
 let page = 1;
 // onSwitchButton();
 async function createGallery() {

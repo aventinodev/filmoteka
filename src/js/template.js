@@ -26,9 +26,9 @@ export function templateCard({
             </div>
            
           <div class="gallery__info-wrap">            
-            <h2 class="gallery__title">${title}</h2>            
+            <h2 class="gallery__subtitle text-hidden">${title}</h2>            
             <div class="gallery__info">
-             <p class="gallery__genres">${
+             <p class="gallery__genres text-hidden">${
                genreNames.length > 3
                  ? genreNames.slice(0, 2).join(', ')
                  : genreNames.join(', ')
