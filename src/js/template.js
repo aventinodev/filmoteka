@@ -30,7 +30,7 @@ export function templateCard({
             <div class="gallery__info">
              <p class="gallery__genres">${
                genreNames.length > 3
-                 ? genreNames.slice(0, 3).splice(2, 1, 'others').join(', ')
+                 ? genreNames.slice(0, 2).join(', ')
                  : genreNames.join(', ')
              }</p>                      
              <p class="gallery__year">${release_date.split('-')[0]}</p>
