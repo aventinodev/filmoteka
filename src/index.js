@@ -2,7 +2,16 @@ import { getPopularFilms, getFilmByKeyWord, getGenres } from './js/api';
 import { templateCards } from './js/template';
 import { refs } from './js/refs';
 // import { onSwitchButton } from './js/switch-btn';
+import {
+  onTogglePage,
+  startAddCurentClass,
+  onHomePageActive,
+} from './js/header';
 
+refs.pageLibrary.addEventListener('click', onTogglePage);
+refs.pageHome.addEventListener('click', onHomePageActive);
+
+startAddCurentClass();
 let page = 1;
 // onSwitchButton();
 async function createGallery() {
