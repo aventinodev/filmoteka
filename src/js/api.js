@@ -36,7 +36,7 @@ export async function getGenres() {
       `${BASE_URL}${GENRES}?api_key=${API_KEY}&language=en-US`
     );
     const data = await response.json();
-
+    console.log(data.genres);
     return data.genres;
   } catch (error) {
     throw new Error(response.status);

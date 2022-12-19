@@ -1,11 +1,12 @@
 import { getGenres } from './api';
+import { genres } from './genres';
 
-getGenres().then(genres => {
-  localStorage.setItem('genresData', JSON.stringify(genres));
-});
+// getGenres().then(genres => {
+//   localStorage.setItem('genresData', JSON.stringify(genres));
+// });
 
-const saveGenresData = localStorage.getItem('genresData');
-const parsedsaveGenresData = JSON.parse(saveGenresData);
+// const saveGenresData = localStorage.getItem('genresData');
+// const parsedsaveGenresData = JSON.parse(saveGenresData);
 
 // export function getGenresNames(array) {
 //   console.log(parsedsaveGenresData);
@@ -18,9 +19,11 @@ const parsedsaveGenresData = JSON.parse(saveGenresData);
 //   }
 // }
 
+console.log(genres);
+// getGenres().then(genresArr => (genres = genresArr));
 export function getGenresNames(array) {
   return array.map(id => {
-    const foundId = parsedsaveGenresData.find(genre => genre.id === id);
+    const foundId = genres.find(genre => genre.id === id);
     return (id = foundId.name);
   });
 }
