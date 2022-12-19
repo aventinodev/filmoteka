@@ -21,11 +21,14 @@ export function startAddCurentClass() {
 }
 
 function onCreateLibraryPage() {
-  refs.form.classList.add('visually-hidden');
-  refs.btnLibrary.classList.remove('visually-hidden');
+  refs.form.classList.toggle('visually-hidden');
+  refs.btnLibrary.classList.toggle('visually-hidden');
 }
 
 export function onHomePageActive() {
   startAddCurentClass();
   refs.pageLibrary.classList.remove('current');
+  refs.header.classList.remove('header--library');
+  refs.header.classList.add('header--home');
+  onCreateLibraryPage();
 }
