@@ -3,6 +3,9 @@
   background-position: center;
   background-size: cover;
 }
+.container__header {
+  position: relative;
+}
 .header--home {
   background-image: url(../images/abstract-background-with-red-lines\ 1.jpg);
   padding-top: 40px;
@@ -171,9 +174,9 @@
   }
 }
 
-.js-show {
-  visibility: visible;
-}
-.is-hidden {
-  visibility: hidden;
-}
+// .js-show {
+//   visibility: visible;
+// }
+// .is-hidden {
+//   visibility: hidden;
+// }

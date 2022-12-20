@@ -1,0 +1,55 @@
+.switsh-wrap {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+
+.switch-btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  display: inline-block;
+  width: 72px; /* ширина */
+  height: 30px; /* высота */
+  border-radius: 15px; /* радиус скругления */
+
+  //   width: 72px; /* ширина */
+  //   height: 38px; /* высота */
+  //   border-radius: 19px; /* радиус скругления */
+
+  background: #bfbfbf; /* цвет фона */
+  z-index: 0;
+  margin: 0;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+
+  transition-duration: 300ms; /* анимация */
+}
+.switch-btn::after {
+  content: '';
+  height: 26px; /* высота кнопки */
+  width: 26px; /* ширина кнопки */
+  border-radius: 13px;
+  top: 2px; /* положение кнопки по вертикали относительно основы */
+  left: 2px; /* положение кнопки по горизонтали относительно основы */
+
+  //   height: 32px; /* высота кнопки */
+  //   width: 32px; /* ширина кнопки */
+  //   border-radius: 17px;
+  //   top: 3px; /* положение кнопки по вертикали относительно основы */
+  //   left: 3px; /* положение кнопки по горизонтали относительно основы */
+
+  background: #fff; /* цвет кнопки */
+  transition-duration: 300ms; /* анимация */
+  position: absolute;
+  z-index: 1;
+}
+.switch-on {
+  background: var(--text-color-secondary);
+  &::after {
+    left: 43px;
+    //    left: 37px;
+  }
+}

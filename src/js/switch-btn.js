@@ -1,38 +1,45 @@
 import { refs } from './refs';
 
-refs.switchBtn.addEventListener('click', onSwitchButton);
-
-export function onSwitchButton() {
-  refs.switchBtn.classList.toggle('switch-on');
-
-  if (refs.switchBtn.classList.contains('switch-on')) {
-    refs.body.style.backgroundColor = 'rgba(0, 0, 0, 0.7)';
+export function onToggleTheme(e) {
+  refs.darkBtn.classList.toggle('js-hidden');
+  refs.lightBtn.classList.toggle('js-hidden');
+  const isDark = refs.lightBtn.classList.contains('js-hidden');
+  if (isDark) {
+    getDarkTheme();
   } else {
-    refs.body.style.backgroundColor = '#ffffff';
+    getLightTheme();
   }
 }
-// $(function(){
-//   $('.switch-btn').click(function (e, changeState) {
-//     if (changeState === undefined) {
-//       $(this).toggleClass('switch-on');
-//     }
-//     if ($(this).hasClass('switch-on')) {
-//       $(this).trigger('on.switch');
-//     } else {
-//       $(this).trigger('off.switch');
-//     }
-//   });
+function getDarkTheme() {
+  refs.body.classList.add('dark');
+  refs.subtitle.classList.add('dark');
+  refs.cards.firstChild.add('dark');
+}
+function getLightTheme() {
+  refs.body.classList.remove('dark');
+  refs.subtitle.classList.remove('dark');
+  refs.cards.firstChild.remove('dark');
+}
 
-//   $('.switch-btn').on('on.switch', function(){
-//     console.log('Кнопка переключена в состояние on');
-//   });
-
-//   $('.switch-btn').on('off.switch', function(){
-//     console.log('Кнопка переключена в состояние off');
-//   });
-
-//   $('.switch-btn').each(function(){
-//     $(this).triggerHandler('click', false);
-//   });
-
+// -------------------------------------------------------------------------
+// document.querySelector('.themetoggle').addEventListener('click', event => {
+//   event.preventDefault();
+//   if (localStorage.getItem('theme') === 'dark') {
+//     localStorage.removeItem('theme');
+//   } else {
+//     localStorage.setItem('theme', 'dark');
+//   }
+//   addDarkClassToHTML();
 // });
+
+// function addDarkClassToHTML() {
+//   try {
+//     if (localStorage.getItem('theme') === 'dark') {
+//       document.querySelector('body').classList.add('dark');
+//       document.querySelector('.themetoggle span').textContent = 'dark_mode';
+//     } else {
+//       document.querySelector('html').classList.remove('dark');
+//       document.querySelector('.themetoggle span').textContent = 'wb_sunny';
+//     }
+//   } catch (err) {}
+// }

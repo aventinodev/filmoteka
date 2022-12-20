@@ -10,7 +10,8 @@ export function templateCard({
   release_date,
   genre_ids,
 }) {
-  const genreNames = getGenresNames(genre_ids);
+  genreNames = getGenresNames(genre_ids);
+  // console.log(genreNames.slice(0, 1).join(', '));
 
   return `<li class="gallery__card id="${id}">
   <a class="gallery__link" href="#">
@@ -28,9 +29,9 @@ export function templateCard({
           <div class="gallery__info-wrap">            
             <h2 class="gallery__subtitle text-hidden">${title}</h2>            
             <div class="gallery__info">
-             <p class="gallery__genres text-hidden">${
+             <p class="gallery__genres">${
                genreNames.length > 3
-                 ? genreNames.slice(0, 2).join(', ')
+                 ? genreNames.slice(0, 1).join(', ')
                  : genreNames.join(', ')
              }</p>             
              <p class="gallery__year">| ${release_date.split('-')[0]}</p>

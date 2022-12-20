@@ -1,4 +1,21 @@
-section {
+.visually-hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
+}
+.text-hidden {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.moovies {
   margin: 0 auto;
   padding-top: 20px;
   padding-bottom: 40px;
@@ -9,30 +26,26 @@ section {
   }
 }
 
-.gallery {
-  // max-width: 468px;
+.movies__list {
   margin: 0 auto;
   margin-bottom: 40px;
   background-color: transparent;
   @include tablet {
     margin-bottom: 60px;
-    // min-width: 768px;
     display: flex;
     flex-wrap: wrap;
     gap: 32px;
   }
   @include desktop {
-    // min-width: 1280px;
     row-gap: 32px;
     column-gap: 16px;
   }
 }
 
-.gallery__card {
+.movies__item {
   border: none;
   border-radius: 5px;
   overflow: hidden;
-
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 
   @media screen and (max-width: 768px) {
@@ -48,85 +61,61 @@ section {
     @include item(3, 16px);
   }
 }
-.gallery__link {
+.movies__link {
   display: flex;
   flex-direction: column;
   height: 100%;
 }
 
-.gallery__img-wrap {
+.movies__img-wrap {
   display: flex;
   overflow: hidden;
   height: 100%;
   position: relative;
 }
 
-.gallery__img {
+.movies__picture,
+.movies__img {
   display: block;
   width: 100%;
   object-fit: cover;
-  transition: transform var(--animation-duration) var(--timing-function);
+  transition: transform $animation-duration $timing-function;
 
   // &:hover,
   // &:focus {
   //   transform: scale(1.03);
   // }
 }
-.gallery__img-wrap:hover .gallery__img {
+.movies__img-wrap:hover .movies__picture
+// .movies__img-wrap:hover .movies__img
+{
   transform: scale(1.1);
 }
 
-.gallery__info-wrap {
+.movies__info-wrap {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   flex-grow: 1;
-  // background-color: #ffffff;
+  //   background-color: #ffffff;
 }
-.gallery__subtitle {
+.movies__subtitle {
   padding-top: 12px;
   padding-bottom: 5px;
   font-size: 20px;
   line-height: 24px;
   text-transform: uppercase;
-  color: #000000;
+  color: $mainTextColor;
 }
-.gallery__info {
-  display: flex;
-  color: var(--text-color-primary);
-  padding-bottom: 5px;
-}
-.text-hidden {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-// .genres__list {
+// .gallery__info {
 //   display: flex;
-//   height: 20px;
-
-//   margin-right: 5px;
+//   color: var(--text-color-primary);
+//   padding-bottom: 5px;
 // }
-.gallery__genres {
+
+.movies__data {
   font-size: 20px;
   line-height: 24px;
   text-transform: capitalize;
-  color: var(--text-color-secondary);
-  margin-right: 5px;
-  //     border-right: 1px solid var(--background-color-accent);
-}
-
-.gallery__year {
-  font-size: 20px;
-  line-height: 24px;
-  text-transform: capitalize;
-  color: var(--text-color-secondary);
-}
-
-@include response {
-  p,
-  b {
-    font-size: 3vw;
-    line-height: 4.5vw;
-  }
+  color: $accentColor;
 }

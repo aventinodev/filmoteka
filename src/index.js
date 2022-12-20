@@ -1,7 +1,7 @@
 import { getPopularFilms, getFilmByKeyWord, getGenres } from './js/api';
 import { templateCards } from './js/template';
 import { refs } from './js/refs';
-// import { onSwitchButton } from './js/switch-btn';
+import { onToggleTheme, getDarkTheme } from './js/switch-btn';
 import {
   onTogglePage,
   startAddCurentClass,
@@ -10,6 +10,7 @@ import {
 
 refs.pageLibrary.addEventListener('click', onTogglePage);
 refs.pageHome.addEventListener('click', onHomePageActive);
+refs.switchBtn.addEventListener('click', onToggleTheme);
 
 startAddCurentClass();
 

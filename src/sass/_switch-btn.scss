@@ -1,55 +1,116 @@
-.switsh-wrap {
-  position: absolute;
-  top: 15px;
-  right: 15px;
+.dark {
+  background: #3c3c3c;
+}
+.dark .gallery__subtitle {
+  color: #fff;
+}
+.dark .gallery__card {
+  box-shadow: 0 4px 4px hsl(242deg 88% 66% / 50%),
+    1px 4px 6px hsl(242deg 88% 66% / 50%);
 }
 
 .switch-btn {
   position: absolute;
-  top: 0;
-  right: 0;
-
-  display: inline-block;
-  width: 72px; /* ширина */
-  height: 30px; /* высота */
-  border-radius: 15px; /* радиус скругления */
-
-  //   width: 72px; /* ширина */
-  //   height: 38px; /* высота */
-  //   border-radius: 19px; /* радиус скругления */
-
-  background: #bfbfbf; /* цвет фона */
-  z-index: 0;
-  margin: 0;
-  padding: 0;
+  width: 40px;
+  height: 40px;
+  bottom: -20px;
+  right: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border: none;
-  cursor: pointer;
-
-  transition-duration: 300ms; /* анимация */
+  background-color: transparent;
 }
-.switch-btn::after {
-  content: '';
-  height: 26px; /* высота кнопки */
-  width: 26px; /* ширина кнопки */
-  border-radius: 13px;
-  top: 2px; /* положение кнопки по вертикали относительно основы */
-  left: 2px; /* положение кнопки по горизонтали относительно основы */
-
-  //   height: 32px; /* высота кнопки */
-  //   width: 32px; /* ширина кнопки */
-  //   border-radius: 17px;
-  //   top: 3px; /* положение кнопки по вертикали относительно основы */
-  //   left: 3px; /* положение кнопки по горизонтали относительно основы */
-
-  background: #fff; /* цвет кнопки */
-  transition-duration: 300ms; /* анимация */
-  position: absolute;
-  z-index: 1;
+.switch-btn__icon--light {
+  display: block;
+  fill: #ffffff;
 }
-.switch-on {
-  background: var(--text-color-secondary);
-  &::after {
-    left: 43px;
-    //    left: 37px;
-  }
+.switch-btn--dark {
 }
+.switch-btn__icon--dark {
+  fill: #ffffff;
+  transition: transform var(--animation-duration) var(--timing-function);
+}
+.switch-btn__icon--light {
+  fill: #ffffff;
+}
+.switch-btn__dark:hover .switch-btn__icon--dark {
+  transform: scale(1.1);
+}
+
+.js-hidden {
+  display: none;
+}
+// через псевдоелементы
+//   .switch-btn::before {
+//     content: '';
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     display: block;
+//     width: 40px;
+//     height: 40px;
+//     background-color: red;
+//   }
+// }
+// .dark.switch-btn::before {
+//   content: 'dark';
+//   position: absolute;
+//   bottom: 0;
+//   display: block;
+//   width: 40px;
+//   height: 40px;
+//   background-color: yellow;
+// }
+
+// ======================
+// кнопка переключатель
+// .switch-btn {
+//   position: absolute;
+//   top: 0;
+//   right: 0;
+
+//   display: inline-block;
+//   width: 72px; /* ширина */
+//   height: 30px; /* высота */
+//   border-radius: 15px; /* радиус скругления */
+
+//   //   width: 72px; /* ширина */
+//   //   height: 38px; /* высота */
+//   //   border-radius: 19px; /* радиус скругления */
+
+//   background: #bfbfbf; /* цвет фона */
+//   z-index: 0;
+//   margin: 0;
+//   padding: 0;
+//   border: none;
+//   cursor: pointer;
+
+//   transition-duration: 300ms; /* анимация */
+// }
+// .switch-btn::after {
+//   content: '';
+//   height: 26px; /* высота кнопки */
+//   width: 26px; /* ширина кнопки */
+//   border-radius: 13px;
+//   top: 2px; /* положение кнопки по вертикали относительно основы */
+//   left: 2px; /* положение кнопки по горизонтали относительно основы */
+
+//   //   height: 32px; /* высота кнопки */
+//   //   width: 32px; /* ширина кнопки */
+//   //   border-radius: 17px;
+//   //   top: 3px; /* положение кнопки по вертикали относительно основы */
+//   //   left: 3px; /* положение кнопки по горизонтали относительно основы */
+
+//   background: #fff; /* цвет кнопки */
+//   transition-duration: 300ms; /* анимация */
+//   position: absolute;
+//   z-index: 1;
+// }
+// .switch-on {
+//   background: var(--text-color-secondary);
+//   &::after {
+//     left: 43px;
+//     //    left: 37px;
+//   }
+// }

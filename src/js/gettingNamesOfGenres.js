@@ -19,7 +19,6 @@ import { genres } from './genres';
 //   }
 // }
 
-console.log(genres);
 // getGenres().then(genresArr => (genres = genresArr));
 export function getGenresNames(array) {
   return array.map(id => {
