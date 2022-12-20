@@ -10,8 +10,7 @@ export function templateCard({
   release_date,
   genre_ids,
 }) {
-  genreNames = getGenresNames(genre_ids);
-  // console.log(genreNames.slice(0, 1).join(', '));
+  const genreNames = getGenresNames(genre_ids);
 
   return `<li class="gallery__card id="${id}">
   <a class="gallery__link" href="#">
